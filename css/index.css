@@ -1,0 +1,253 @@
+:root {
+  --font-weight-600: 600;
+  --secondary-color: rgb(78, 78, 78);
+  --main-transation: all 1s;
+  --dark-gray: rgb(30, 30, 30);
+  --Azure-Radiance: #0078ff;
+}
+#navbar {
+  background-color: transparent;
+  transition: var(--main-transation);
+}
+#navbar.scrolled {
+  background-color: black;
+}
+.navbar-toggler-icon {
+  width: 25px;
+  height: 25px;
+}
+.fs-13 {
+  font-size: 13px;
+}
+.fw-600 {
+  font-weight: var(--font-weight-600);
+}
+.fs-18 {
+  font-size: 18px;
+}
+.fs-48 {
+  font-size: 48px;
+}
+.dark-color {
+  color: var(--secondary-color);
+}
+.text-dark-gray {
+  color: var(--dark-gray);
+}
+h1 {
+  font-size: 63px;
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/hero-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header span {
+  font-size: 40px;
+}
+
+header .navbar .navbar-nav .nav-item,
+.navbar-nav .nav-link.active {
+  position: relative;
+}
+
+header .navbar .navbar-nav .nav-item::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 85%;
+  left: 13%;
+  transition: var(--main-transation);
+}
+header .navbar .navbar-nav .nav-item:hover::after {
+  width: 55%;
+}
+
+.navbar-nav .nav-link.active::after {
+  content: " ";
+  width: 55%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 85%;
+  left: 13%;
+}
+
+main .about h2::after {
+  content: " ";
+  width: 20%;
+  height: 8%;
+  background-color: var(--Azure-Radiance);
+  position: absolute;
+  top: 100%;
+  left: 0%;
+}
+
+main .main-head p::after {
+  content: " ";
+  width: 6%;
+  height: 15%;
+  background-color: var(--Azure-Radiance);
+  position: absolute;
+  top: 135%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+main .services span {
+  width: 120px;
+  height: 120px;
+  border: 10px solid var(--Azure-Radiance);
+}
+
+main .services span,
+main .contact .social span {
+  transition: var(--main-transation);
+}
+main .services .content {
+  cursor: pointer;
+}
+main .services .content:hover span,
+main .contact .social span:hover {
+  background-color: var(--Azure-Radiance);
+  border-color: #cde1f8;
+}
+main .services .content i,
+main .contact .social span i {
+  transition: var(--main-transation);
+  cursor: pointer;
+}
+main .services .content:hover i,
+main .contact .social span:hover i {
+  color: white;
+}
+main .icons {
+  background-image: linear-gradient(
+      rgba(56, 141, 238, 0.8),
+      rgba(56, 141, 238, 0.8)
+    ),
+    url(../images/counters-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+main .icons span {
+  width: 80px;
+  height: 80px;
+  border: 10px solid white;
+}
+
+main .work .icon {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--Azure-Radiance);
+}
+
+main .work .icon i {
+  color: var(--Azure-Radiance);
+}
+main .work .content .image img {
+  transition: var(--main-transation);
+}
+
+main .work .content:hover img {
+  transform: scale(1.1);
+}
+
+main .testimonial .carousel-inner img {
+  width: 90px;
+  height: 90px;
+}
+main .testimonial {
+  background-image: linear-gradient(
+      rgba(56, 141, 238, 0.8),
+      rgba(56, 141, 238, 0.8)
+    ),
+    url(../images/overlay-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+main .blog .card-footer img {
+  width: 40px;
+  height: 40px;
+}
+
+main .blog .special {
+  background-color: var(--Azure-Radiance);
+  position: absolute;
+  top: 92%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+main .contact {
+  background-image: linear-gradient(
+      rgba(56, 141, 238, 0.8),
+      rgba(56, 141, 238, 0.8)
+    ),
+    url(../images/overlay-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+main .contact .social span {
+  width: 50px;
+  height: 50px;
+  border: 5px solid var(--Azure-Radiance);
+}
+
+main .contact h2 {
+  position: relative;
+}
+main .contact h2::after {
+  content: " ";
+  width: 20%;
+  height: 6%;
+  background-color: var(--Azure-Radiance);
+  position: absolute;
+  top: 108%;
+  left: 0;
+}
+
+.side {
+  width: 40px;
+  height: 40px;
+  background-color: var(--Azure-Radiance);
+}
+
+@media (max-width: 767px) {
+  main .about h2::after {
+    width: 35%;
+  }
+  .margin-left {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 990px) {
+  header nav .navbar-collapse {
+    background-color: white;
+    z-index: 1000;
+  }
+  header nav ul {
+    text-align: center;
+  }
+  header nav .navbar-collapse ul li a {
+    color: black !important;
+  }
+}
